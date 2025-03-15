@@ -188,7 +188,10 @@ class Qwen2VLGRPOTrainer(Trainer):
                 False if args.gradient_checkpointing else model_init_kwargs.get("use_cache")
             )
             if "Qwen2-VL" in model_id:
-                model = Qwen2VLForConditionalGeneration.from_pretrained(model, **model_init_kwargs)
+                model = Qwen2VLForConditionalGeneration.from_pretrained(
+                    "Qwen/Qwen2-VL-2B-Instruct",
+                    torch_dtype=torch.float16
+                )
             elif "Qwen2.5-VL" in model_id:
                 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(model, **model_init_kwargs)
             elif "Aria" in model_id:

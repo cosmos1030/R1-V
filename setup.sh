@@ -1,15 +1,11 @@
 # Install the packages in r1-v .
-cd src/r1-v 
-pip install -e ".[dev]"
+cd src/
 
+# conda create -n r1-v python=3.11 
+# conda activate r1-v
 # Addtional modules
-pip install wandb==0.18.3
-pip install tensorboardx
-pip install qwen_vl_utils torchvision
-pip install flash-attn --no-build-isolation
 
-# vLLM support 
-pip install vllm==0.7.2
-
-# fix transformers version
-pip install git+https://github.com/huggingface/transformers.git@336dc69d63d56f232a183a3e7f52790429b871ef
+pip install -r requirements.txt
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+pip install flash-attn==2.7.3
+conda install -c conda-forge mpi4py

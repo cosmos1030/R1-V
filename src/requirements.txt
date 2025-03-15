@@ -61,7 +61,6 @@ fastapi==0.115.8
 fastjsonschema==2.21.1
 filelock==3.17.0
 flake8==7.1.1
-flash_attn==2.7.4.post1
 fonttools==4.56.0
 fqdn==1.5.1
 frozenlist==1.5.0
@@ -218,7 +217,6 @@ pytz==2025.1
 PyYAML==6.0.2
 pyzmq==26.2.1
 qwen-vl-utils==0.0.10
--e git+ssh://git@github.com/Deep-Agent/R1-V.git@b97379a10f59b12d3b5d9e63f478aa98ebf97b27#egg=r1_v&subdirectory=src/r1-v
 ray==2.42.1
 referencing==0.36.2
 regex==2024.11.6
@@ -260,9 +258,6 @@ threadpoolctl==3.5.0
 tiktoken==0.8.0
 tinycss2==1.4.0
 tokenizers==0.21.0
-torch==2.5.1
-torchaudio==2.5.1
-torchvision==0.20.1
 tornado==6.4.2
 tqdm==4.67.1
 traitlets==5.14.3
